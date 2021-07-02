@@ -10,6 +10,7 @@ $(document).ready(function(){
             data:{'Identifiant' : id, 'Motdepasse' : mdp},
             cors:true,
             success:function(data){
+                document.cookie = "";
                 document.cookie = `connexionToken=${data.data};`
                 document.location.href='./animauxListe'
             }

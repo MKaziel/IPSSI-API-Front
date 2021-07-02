@@ -1,24 +1,30 @@
 $(document).ready(function () {
     $.ajax({
         dataType: "json",
-        url: "http://localhost:8080/animal?access=845c4f3dd5ec02c3ff0caf3a1a255f9b",
+        url: "http://localhost:8080/produit?access=845c4f3dd5ec02c3ff0caf3a1a255f9b",
         cors:true,
         success: function (data) {
+            console.log(data);
             var body = document.getElementById("container");
-            var animx = data.data;
+            var produits = data.data;
 
-            for (var i = 0; i < animx.length; i++) {
-                let animal = animx[i];
+            for (var i = 0; i < produits.length; i++) {
+                let produit = produits[i];
+                console.log(produits);
                 var div = document.createElement("div");
                 div.setAttribute("class", "card");
-                div.innerHTML = `<div class="card-header">
-                    <img src="img/animal7.png" alt="rover" />  
+                div.innerHTML = ` <div class="card-header">
+                <img src="img/article1.jpg" alt="rover" />
                 </div>
                 <div class="card-body">
-                    <span class="tag tag-teal" id="race">${animal.race}</span>
-                    <h4 id="name">${animal.nom}</h4>
-                    <p id="detail">${animal.description}</p>
-
+                    <span class="tag tag-teal">${produit.nom}</span>
+                    <h4>
+                    ${produit.type_animal}
+                    </h4>
+                    <p>
+                    ${produit.description}
+                    </p>
+                
                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Détails</button>
             
                     <!-- Modal -->
@@ -29,19 +35,23 @@ $(document).ready(function () {
                         <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">La déscription de l'animal</h4>
+                            <h4 class="modal-title">La déscription de l'article</h4>
                         </div>
                         <div class="modal-body">
+                            <label>Nom</label>
+                            <p>${produit.nom}</p>
                             <label>Description</label>
-                            <p>${animal.description}</p>
-                            <label>Age</label><p>${animal.age}</p>
+                            <p>${produit.description}</p>
+                            <label>Prix</label>
+                            <p>${produit.prix}</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Acheter</button>
                         </div>
                         </div>
-                        </div>
+                        
+                    </div>
                     </div>
                 </div>`;
                 body.appendChild(div);
