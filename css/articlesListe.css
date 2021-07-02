@@ -12,6 +12,7 @@ body {
   color: #10182f;
 }
 .container {
+  margin-top: 30%;
   display: flex;
   width: 1040px;
   justify-content: space-evenly;
@@ -79,4 +80,72 @@ body {
 }
 .user-info small {
   color: #545d7a;
+}
+
+
+header {
+	height: 100px;
+	background: #ba8559;
+	width: 100%;
+	z-index: 10;
+	position:absolute;
+  top: 0%;
+}
+
+nav {
+	float: right;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: #fff;
+}
+
+button {
+  display: inline-flex;
+     background-color:  white;
+     align-items: center;
+     justify-content: center;
+     border: #303030 1px solid;
+     border-radius: 3rem;
+     padding: .4rem .55rem;
+     font-size: .9rem;
+     min-width: 75px;
+     margin-bottom: .5rem;
+     margin-right: 0.35rem;
+     color: #404040;
+     text-align: center;
+ }
+ button:hover{
+  background-color: #ba8559;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.card-buton {
+ 
+     background-color:  white;
+     position: relative;
+     align-items: right;
+     justify-content: center;
+     border: #303030 1px solid;
+     border-radius: 3rem;
+     padding: .4rem .5rem;
+     font-size: .9rem;
+     min-width: 75px;
+     margin-bottom: .5rem;
+     margin-left: 10.5rem;
+     margin-top: -2.4rem;
+     color: #404040;
+ }
+ .card-buton:hover{
+  background-color:#ba8559;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
 }

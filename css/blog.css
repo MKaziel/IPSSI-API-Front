@@ -1,10 +1,15 @@
-/*PEN STYLES*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
+}/*PEN STYLES*/
+
 body {
     background: #f7f8fc;
     margin: 2rem;
+}
+.blog-body {
+    
+    margin-top: 10%;
 }
 .blog-card {
     display: flex;
@@ -182,4 +187,27 @@ body {
     .blog-card.alt .details {
         padding-left: 25px;
    }
+}
+
+
+header {
+	height: 100px;
+	background: #ba8559;
+	width: 100%;
+	z-index: 10;
+	position:absolute;
+     top: 0%;
+}
+
+nav {
+	float: right;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: #fff;
 }

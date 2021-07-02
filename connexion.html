@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+        <meta charset="UTF-8">
         <link href="css/connexion.css" rel="stylesheet" type="text/css">
-       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./script/connexion.js"></script>
     </head>
 <body>
     <div class="login-box">
         <h2>Connexion</h2>
         <form>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input id="Identifiant" type="text" name="Identifiant" required>
             <label>Identifiant</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="">
+            <input id="Motdepasse" type="password" name="Motdepasse" required>
             <label>Mot de passe</label>
           </div>
-          <a href="#">
+          <a id="ConnexionBouton">
             <span></span>
             <span></span>
             <span></span>
